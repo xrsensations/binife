@@ -1,85 +1,19 @@
-
+<?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/header.php';?>
 <!--====== SIGNIN ONE PART START ======-->
-<section class="signin-area signin-one">
-   <div class="container">
-      <div class="row justify-content-center">
-         <div class="col-lg-5">
-            <form action="#">
-               <div class="signin-form form-style-two rounded-buttons">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <div class="form-input">
-                           <label>Your account will be under this email</label>
-                           <div class="input-items default">
-                              <input type="text" placeholder="Email" />
-                              <i class="lni lni-envelope"></i>
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-12">
-                        <div class="form-input">
-                           <label>
-                           Name will be used to personalize your experience
-                           </label>
-                           <div class="input-items default">
-                              <input type="text" placeholder="Name" />
-                              <i class="lni lni-user"></i>
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-12">
-                        <div class="form-input">
-                           <label>Password for your account</label>
-                           <div class="input-items default">
-                              <input type="password" placeholder="Password" />
-                              <i class="lni lni-key"></i>
-                           </div>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-input rounded-buttons">
-                           <button
-                              class="btn primary-btn rounded-full"
-                              type="submit"
-                              >
-                           Sign In!
-                           </button>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-6">
-                        <div class="form-input rounded-buttons">
-                           <button
-                              class="btn primary-btn-outline rounded-full"
-                              type="submit"
-                              >
-                           Sign Up
-                           </button>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                     <div class="col-md-12">
-                        <div class="form-input text-center">
-                           <p class="text">
-                              By signing in you agree with the
-                              <a href="javascript:void(0)">Terms and Conditions</a>
-                              and
-                              <a href="javascript:void(0)">Privacy</a>
-                           </p>
-                        </div>
-                        <!-- form input -->
-                     </div>
-                  </div>
-               </div>
-               <!-- signin form -->
-            </form>
-         </div>
-      </div>
-      <!-- row -->
+<form class = "w-50 md-25 mx-auto p-5 forms" method = "POST">
+   <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email</label>
+      <input type="email" class="form-control" name = "email" id="exampleInputEmail1">
+      <!--<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
    </div>
-   <!-- container -->
-</section>
-<!--====== SIGNIN ONE PART ENDS ======-->
+   <div class="mb-3">
+         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+         <input type="password" class="form-control" name = "password" id="exampleInputPassword1">
+   </div>
+   
+   <button type="submit" name = "submit" class="btn btn-primary">Iniciar sesión</button>
+</form>
+<?php include $_SERVER['DOCUMENT_ROOT'].'/binife/funciones/action_log_in.php';?>
+
+</body>
+</html>

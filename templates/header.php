@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['nombre']) != false){
+    $var_nombre = $_SESSION["nombre"];
+}else{
+    $var_nombre = " ";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

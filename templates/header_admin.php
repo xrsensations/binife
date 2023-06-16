@@ -1,3 +1,13 @@
+<?php 
+session_start();
+
+if(isset($_SESSION['nombre']) != false){
+    $var_nombre = $_SESSION["nombre"];
+}else{
+    $var_nombre = " ";
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,13 +16,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binife</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/binife/css/style.css">
 </head>
 <header>
     <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php"><img src="img/binife.png" alt="" width ="100"></a>
-    <img src="img/barra-de-menus.png" alt="" id="sidebarCollapse" width="40">
+    <a class="navbar-brand" href="index.php"><img src="/binife/img/binife.png" alt="" width ="100"></a>
+    <img src="/binife/img/barra-de-menus.png" alt="" id="sidebarCollapse" width="40">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -39,7 +49,12 @@
                 </li>
             </ul>
         </div>
-        <button class="btn btn-outline-success" type="submit">Login</button>
+        <?php if($var_nombre == " "){
+
+          echo'<a class="btn btn-outline-success" href = "/binife/login.php">Log in</a>';
+        }else{
+          echo'<a class="btn btn-outline-danger" href = "/binife/funciones/action_log_out.php">Log out</a>';
+        }?>
     </div>
 </nav>  
 </header>
@@ -60,7 +75,7 @@
       </div>
       <ul class="list-unstyled">
         <li>
-          <a href="#">Inicio</a>
+          <a href="/binife/forms/form_alta_cliente.php">Alta cliente</a>
         </li>
         <li>
           <a href="#">Acerca de</a>

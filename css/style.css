@@ -23,6 +23,8 @@ SIDEBAR
 
 .wrapper {
     display: flex;
+    width: 100%;
+    padding: 0;
   }
   
   #sidebar {
@@ -41,8 +43,9 @@ SIDEBAR
   }
   
   #content {
-    flex: 1;
+    /*flex: 1;*/
     padding: 20px;
+    width: 100%;
   }
   
   #sidebarCollapse:hover {
@@ -56,4 +59,8 @@ SIDEBAR
 
   #sidebar li{
     margin-top: 5%;
+  }
+
+  .forms{
+    background-color: #f6f6f7;
   }
