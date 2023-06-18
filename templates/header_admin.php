@@ -27,7 +27,7 @@ if(isset($_SESSION['nombre']) != false){
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0 lg-end">
+        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0 lg-end">
             <li class="nav-item">
                 </li>
                 <li class="nav-item">
@@ -47,7 +47,7 @@ if(isset($_SESSION['nombre']) != false){
                 <li class="nav-item">
                     <a class="nav-link disabled">Disabled</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
         <?php if($var_nombre == " "){
 
@@ -75,13 +75,31 @@ if(isset($_SESSION['nombre']) != false){
       </div>
       <ul class="list-unstyled">
         <li>
+          <a href="/binife/admin.php">Panel</a>
+        </li>
+        <li>
           <a href="/binife/forms/form_alta_cliente.php">Alta cliente</a>
         </li>
         <li>
-          <a href="#">Acerca de</a>
+          <a href="/binife/tarifas.php">Tarifas</a>
         </li>
         <li>
-          <a href="#">Contacto</a>
+          <a href="/binife/equipos.php">Equipos</a>
         </li>
+        
+        <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Tarifas
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <li><a class="dropdown-item" href="#">Nueva tarifa</a></li>
+          <li><a class="dropdown-item" href="/binife/forms/form_alta_tarifa.php">Alta de la tarifa</a></li>
+          <li><a class="dropdown-item" href="#">Opción 3</a></li>
+        </ul>
+      </li>
+        <li>
+          <a href="#">Crear reserva</a>
+        </li> -->
+    </ul>
       </ul>
     </nav>

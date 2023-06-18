@@ -1,7 +1,8 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/header_admin.php';?>
-<main>
-<div id="content">
-      <?php include $_SERVER['DOCUMENT_ROOT'].'/binife/funciones/db_select_panel.php';?>
-    </div>
-  </div></main>
+
+<div id="content" class = "">
+    <?php include $_SERVER['DOCUMENT_ROOT'].'/binife/funciones/db_select_equipos.php';?>
+</div>
+</div>
+
 <?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/footer.php';?>
