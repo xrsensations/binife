@@ -20,7 +20,10 @@
         <tr>
             <td>'.$entrada['equipo_id'].'</td>
             <td>'.$entrada['descripcion'].'</td>
-            <td><button class = "btn btn-primary">Ver integrantes</button></td>
+            <td><form action = "/binife/funciones/action_ver_equipo.php" method = "POST">
+            <input type = "number" value = "'.$entrada['equipo_id'].'" name = "equipo_id" hidden>
+            <button type = "submit" class = "btn btn-primary">Ver integrantes</button>
+            </form></td>
         </tr>
         ';
         }
