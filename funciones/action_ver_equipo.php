@@ -18,6 +18,7 @@
     </tr>
     </thead>
     <tbody>';
+    
     foreach($result as $entrada){
         echo'
         <tr>
