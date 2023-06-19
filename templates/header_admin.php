@@ -21,7 +21,7 @@ if(isset($_SESSION['nombre']) != false){
 <header>
     <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php"><img src="/binife/img/binife.png" alt="" width ="100"></a>
+    <a class="navbar-brand"><img src="/binife/img/binife.png" alt="" width ="100"></a>
     <img src="/binife/img/barra-de-menus.png" alt="" id="sidebarCollapse" width="40">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -49,11 +49,8 @@ if(isset($_SESSION['nombre']) != false){
                 </li>
             </ul> -->
         </div>
-        <?php if($var_nombre == " "){
-
-          echo'<a class="btn btn-outline-success" href = "/binife/login.php">Log in</a>';
-        }else{
-          echo'<a class="btn btn-outline-danger" href = "/binife/funciones/action_log_out.php">Log out</a>';
+        <?php if($var_nombre != " "){
+          echo'<a class="btn btn-outline-danger" href = "/binife/funciones/action_log_out.php">Cerrar sesión</a>';
         }?>
     </div>
 </nav>  

@@ -6,7 +6,7 @@
 
     $result = mysqli_query($conn, $sql);
 
-    echo ' <div class="form-group">
+    echo '<div class="form-group">
     <label for="exampleFormControlSelect1">Example select</label>
         <select class="form-control" id="exampleFormControlSelect1">';
     foreach($result as $entrada){

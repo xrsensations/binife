@@ -20,13 +20,16 @@ if(isset($_SESSION['nombre']) != false){
 <header>
     <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php"><img src="img/binife.png" alt="" width ="100"></a>
-    <a class="btn btn-outline-success" href="login.php" type="submit">Login</a>
+    <a class="navbar-brand" ><img src="img/binife.png" alt="" width ="100"></a>
+    <?php
+    if($var_nombre != ' ')
+    echo '<a class="btn btn-outline-danger" href="/binife/funciones/action_log_out.php" type="submit">Cerrar sesión</a>';
+    ?>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-    <!--</div>-->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </div>
   </div>
 </nav>  
 </header>

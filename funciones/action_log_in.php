@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
 
     foreach($result as $entrada){
        $nombre = $entrada["nombre"];
-       $user_id = $entrada["trabajador_id"];
+       $trabajador_id = $entrada["trabajador_id"];
        $tipo = $entrada["tipo"];
     }
 
@@ -23,9 +23,14 @@ if (isset($_POST['submit'])){
         session_start();
         $_SESSION['nombre'] = $nombre;
         $_SESSION['tipo'] = $tipo;
-        $_SESSION['trabajador_id'] = $user_id;
+        $_SESSION['trabajador_id'] = $trabajador_id;
         
-        echo '<script type="text/javascript">window.location.href = "admin.php";</script>';
+        if($tipo == "admin"){
+            echo '<script type="text/javascript">window.location.href = "admin.php";</script>';
+        }else{
+            echo '<script type="text/javascript">window.location.href = "trabajador.php?q='.$trabajador_id.'";</script>';
+
+        }
     }else{
         echo '<script>alert("Incorrect password")</script>';
     }
