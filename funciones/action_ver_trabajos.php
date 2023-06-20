@@ -1,7 +1,6 @@
 <?php 
     include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/connection.php';
     //connection to database
-
     $trabajador_id = $_GET['q'];
     $sql1 = "SELECT equipo_id, descripcion FROM bini_equipo_trabajadores WHERE trabajador_id = $trabajador_id";
     
@@ -11,9 +10,8 @@
 
     $equipo_id = $row["equipo_id"];
     $descripcion = $row["descripcion"];
-    $sql = "SELECT nombre, apellidos, equipo_id, descripcion FROM bini_equipo_trabajadores WHERE equipo_id = $equipo_id";
+    $sql = "SELECT nombre, apellidos, equipo_id, descripcion FROM bini_equipo_trabajadores  WHERE equipo_id = $equipo_id";
     $result = mysqli_query($conn, $sql);
-
     if(mysqli_num_rows($result) > 0){
  
         echo '<div class = "text-center border m-5 p-3">
