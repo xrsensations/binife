@@ -1,6 +1,6 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/header.php';?>
 <!--====== SIGNIN ONE PART START ======-->
-<form class = "mx-auto p-5 forms" method = "POST">
+<form class = "mx-auto p-5" id = "login" method = "POST">
    <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email</label>
       <input type="email" class="form-control" name = "email" id="exampleInputEmail1">
