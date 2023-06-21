@@ -1,55 +1,59 @@
 <?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/header_admin.php';?>
 
+<?php
+
+    //connection to database
+    include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/connection.php';
+
+    $sql = "SELECT * FROM bini_clientes";    
+    $result = mysqli_query($conn, $sql);
+
+?>
+
 <div id="content" class = "">
     <div class = "row">
         <form class = "w-75 md-25 mx-auto p-5 forms">
-            <h3><strong>Da de alta a un nuevo cliente</strong></h3><br>
+            <h3><strong>Añadir una nueva reserva</strong></h3><br>
             <div class = "row">
-                    <div class ="col-md-6">
-                    <div class="mb-3">
-                    <label for="comercial" class="form-label">Nombre comercial</label>
-                    <input type="text" class="form-control" name ="comercial">
-                    </div>
-                    <div class="mb-3">
-                        <label for="fiscal" class="form-label">Nombre fiscal</label>
-                        <input type="text" class="form-control" name ="fiscal">
-                    </div>
-                    <div class="mb-3">
-                        <label for="direccion" class="form-label">Dirección</label>
-                        <input type="text" class="form-control" name ="direccion">
-                    </div>
-                    <div class="mb-3">
-                        <label for="postal" class="form-label">Código postal</label>
-                        <input type="text" class="form-control" name ="postal">
-                    </div>
-                    <div class="mb-3">
-                    <label for="poblacion" class="form-label">Población</label>
-                    <input type="text" class="form-control" name ="poblacion">
-                    </div>
-                </div>
-                <div class ="col-md-6">
-                        <div class="mb-3">
-                            <label for="provincia" class="form-label">Província</label>
-                            <input type="text" class="form-control" name ="provincia">
+                    <div class ="w-100">
+                        <div class="d-flex w-100">
+                            <div class="mb-3 w-50 me-2">
+                            <label for="cliente" class="form-label">Cliente</label>
+                            <select class="form-control" name ="cliente" required> 
+                                <option hidden disabled selected> - Elige un cliente - </option>
+                                <?php                               
+                                foreach($result as $cliente){
+                                    echo'<option value="'.$cliente['cliente_id'].'">'.$cliente['nombre_comercial'].'</option>';
+                                }
+                                ?>
+                            </select>
+                            </div>
+                            <div class="mb-3 w-50">
+                                <label for="hospedaje" class="form-label">Hospedaje</label>
+                                <select class="form-control" name ="customer" disabled> 
+                                    
+                                </select>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="pais" class="form-label">País</label>
-                            <input type="text" class="form-control" name ="pais">
+                        <div class="d-flex w-100">
+                            <div class="mb-3 w-50 me-2">
+                                <label for="direccion" class="form-label">Fecha de entrada</label>
+                                <input type="date" class="form-control" name="entrada" min="<?= date('Y-m-d'); ?>" value="<?= date('Y-m-d'); ?>">
+                            </div>
+                            <div class="mb-3 w-50">
+                                <label for="postal" class="form-label">Fecha de salida</label>
+                                <input type="date" class="form-control" name="salida" min="<?= date('Y-m-d'); ?>" value="<?= date('Y-m-d'); ?>">
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="telefono" class="form-label">Telefono</label>
-                            <input type="text" class="form-control" name ="telefono">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <!--<div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                        </div>-->
-                </div>
-            
+                    <div class="mb-3">
+                        <label for="personas" class="form-label">Personas</label>
+                        <input type="number" class="form-control" name ="personas">
+                    </div>
+                    <div class="mb-3"> 
+                        <label for="comentarios" class="form-label">Comentarios</label>
+                        <textarea class="form-control" name ="comentarios"></textarea>
+                    </div>
+                </div>          
             </div>
             
 
