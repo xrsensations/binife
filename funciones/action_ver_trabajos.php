@@ -28,4 +28,5 @@
     }else{
         echo '<h4>Aún no tienes equipo...</h4>';
     }
+    mysqli_close($conn);
 ?>

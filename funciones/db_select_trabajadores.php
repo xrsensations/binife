@@ -30,5 +30,4 @@
         echo'<div class ="d-flex gap-3"><a href = "../equipos.php" class ="btn btn-primary">Volver atras</a><p>No quedan más trabajadores</p></div>';
     }
 
-
 ?>
