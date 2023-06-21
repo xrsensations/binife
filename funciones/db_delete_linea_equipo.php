@@ -16,6 +16,7 @@
         }else{
             echo 'querry_error' . mysqli_error($conn);
         }    
+        mysqli_close($conn);
     
 
 ?>

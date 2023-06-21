@@ -45,18 +45,7 @@
 
         }
 
-        /*<div class = "d-flex gap-5">
-        <a href = "../equipos.php" class ="btn btn-primary">Volver atras</a>
-        <p>Añade un trabajador:</p>
-        <form method = "POST" class =  "d-flex gap-3"> ';
-        include $_SERVER['DOCUMENT_ROOT'].'/binife/funciones/db_select_trabajadores.php';
-        
-echo'<input type = "number" name = "equipo_id" value = "'.$equipo_id.'" hidden>
-        <input class ="btn btn-info" type = "submit" name = "añadir" value = "Añadir"></form>
-    </div>
-    </div>
-    </div>*/
-    //include $_SERVER['DOCUMENT_ROOT'].'/binife/funciones/db_insert_linea_equipo.php';
+        mysqli_close($conn);
 
     include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/footer.php';
 ?>

@@ -23,6 +23,10 @@ SIDEBAR
     overflow-y: auto; /* Agrega un desplazamiento vertical */
     height: 100vh;
   }
+
+  /* #nav {
+    height: 20vh ;
+  } */
   
   #sidebar.active {
     margin-left: -250px;

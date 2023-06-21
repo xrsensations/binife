@@ -19,7 +19,7 @@ if(isset($_SESSION['nombre']) != false){
     <link rel="stylesheet" href="/binife/css/style.css">
 </head>
 <header>
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light" id ="nav">
   <div class="container-fluid">
     <a class="navbar-brand"><img src="/binife/img/binife.png" alt="" width ="100"></a>
     <img src="/binife/img/barra-de-menus.png" alt="" id="sidebarCollapse" width="40">
@@ -73,6 +73,9 @@ if(isset($_SESSION['nombre']) != false){
       <ul class="list-unstyled">
         <li>
           <a href="/binife/admin.php">Panel</a>
+        </li>
+        <li>
+          <a href="/binife/admin.php">Albaranes</a>
         </li>
         <li>
           <a href="/binife/forms/form_alta_cliente.php">Alta cliente</a>

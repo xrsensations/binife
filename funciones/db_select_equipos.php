@@ -28,5 +28,5 @@
         ';
         }
     echo'</tbody></table><a href = "/binife/forms/form_crear_equipo.php" class = "btn btn-primary">Crear equipo</a>';
-
+    mysqli_close($conn);
 ?>

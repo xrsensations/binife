@@ -1,6 +1,5 @@
 <?php 
 
-    if(isset($_POST['añadir'])){
         $equipo_id = $_POST['equipo_id'];
         $trabajador_id = $_POST['trabajador_id'];
         $fecha = date("Y").'-'.date("m").'-'.date("d");
@@ -17,7 +16,8 @@
         }else{
             echo 'querry_error' . mysqli_error($conn);
         }    
-    }   
-    } 
+    }
+    mysqli_close($conn);   
+
 
 ?>

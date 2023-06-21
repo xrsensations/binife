@@ -34,6 +34,6 @@ if (isset($_POST['submit'])){
     }else{
         echo '<script>alert("Incorrect password")</script>';
     }
-
+    mysqli_close($conn);
 }
 ?>
