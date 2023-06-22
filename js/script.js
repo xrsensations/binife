@@ -20,3 +20,13 @@ function mostrarHospedaje(id_cliente){
   return;
   
 }  
+
+function actualizarSalida(entrada){
+  salida = document.getElementById("fechaSalida")
+  salida.disabled = false;
+  var date = new Date(entrada);
+  date.setDate(date.getDate() + 1);
+  salida.min = date.toLocaleDateString('en-CA');
+  salida.value = date.toLocaleDateString('en-CA');
+  salida.focus();
+}  

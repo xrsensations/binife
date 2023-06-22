@@ -36,11 +36,11 @@
                         <div class="d-flex w-100">
                             <div class="mb-3 w-50 me-2">
                                 <label for="direccion" class="form-label">Fecha de entrada</label>
-                                <input type="date" class="form-control" name="entrada" required min="<?= date('Y-m-d'); ?>" value="<?= date('Y-m-d'); ?>">
+                                <input type="date" class="form-control" onchange="actualizarSalida(this.value)" name="entrada" required min="<?= date('Y-m-d'); ?>">
                             </div>
                             <div class="mb-3 w-50">
                                 <label for="postal" class="form-label">Fecha de salida</label>
-                                <input type="date" class="form-control" name="salida" required min="<?= date('Y-m-d'); ?>" value="<?= date('Y-m-d'); ?>">
+                                <input type="date" onfocus="this.showPicker()" class="form-control" name="salida" required disabled id="fechaSalida">
                             </div>
                         </div>
                     <div class="mb-3">
