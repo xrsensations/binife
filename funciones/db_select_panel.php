@@ -33,7 +33,7 @@
                 echo '<td class ="bg-warning">'.$entrada['estado'].'</td>'; 
             }
             echo'
-            <td>'.$entrada['anterior'].'dias</td>
+            <td>'.$entrada['anterior'].' dias</td>
             <td>'.$entrada['siguiente'].' dias</td>
             <td>entrada</td>
             <td><input type="checkbox" class="form-check-input"></td>

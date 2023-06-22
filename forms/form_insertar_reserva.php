@@ -1,7 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/header_admin.php';?>
-
-<?php
-
+<?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/header_admin.php';
     //connection to database
     include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/connection.php';
 
@@ -12,7 +9,7 @@
 
 <div id="content" class = "">
     <div class = "row">
-        <form class = "w-75 md-25 mx-auto p-5 forms" action="../funciones/db_insert_reserva.php" method="post">
+        <form class = "w-75 md-25 mx-auto p-5 forms" action="/binife/funciones/db_insert_reserva.php" method="POST">
             <h3><strong>Añadir una nueva reserva</strong></h3><br>
             <div class = "row">
                     <div class ="w-100">
@@ -53,7 +50,7 @@
                     </div>
                 </div>          
             </div>
-            <button name="submitinsert" class="btn btn-primary">Submit</button>
+            <input type = "submit" name="submitinsert" class="btn btn-primary"/>
         </form>
     </div>
 </div>

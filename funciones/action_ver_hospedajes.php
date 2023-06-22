@@ -16,7 +16,7 @@
     $options = "<option hidden disabled selected> - Elige un hosepdaje - </option>";
 
     foreach($hospedajes as $hospedaje){
-        $options.= '<option value="'.$hospedaje["id"].'">'.$hospedaje['nombre_hospedaje'].'</option>';
+        $options.= '<option value="'.$hospedaje['hospedaje_id'].'">'.$hospedaje['nombre_hospedaje'].'</option>';
     }
 
     echo $options;
