@@ -10,7 +10,7 @@
 
     $result = mysqli_query($conn, $sql);
 
-    echo '<table class="table">
+    echo '<div class ="row"><div class = "col-md-10"><table class="table">
     <thead class="table-light">
     <tr>
         <th scope="col">#</th>
@@ -35,6 +35,6 @@
             
          <tr>';
         }
-    echo'</tbody></table>';
+    echo'</tbody></table></div><div class = "col-md-2"><a href = "/binife/forms/form_crear_tarifa.php" class= "btn btn-info">+ Nueva tarifa</a></div></div>';
     mysqli_close($conn);
 ?>

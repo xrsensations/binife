@@ -1,7 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/header_admin.php';?>
-
-<?php
-
+<?php include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/header_admin.php';
     //connection to database
     include $_SERVER['DOCUMENT_ROOT'].'/binife/templates/connection.php';
 
