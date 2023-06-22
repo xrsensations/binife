@@ -20,13 +20,12 @@
         <ul class = "list-unstyled">';
         foreach($result as $entrada){
             echo'
-            <li>'.$entrada['nombre'].' '.$entrada['apellidos'].'</li>
-            
-            ';
+            <li>'.$entrada['nombre'].' '.$entrada['apellidos'].'</li>';
         }
         echo'</ul></div>';
     }else{
         echo '<h4>Aún no tienes equipo...</h4>';
     }
+    include $_SERVER['DOCUMENT_ROOT'].'/binife/funciones/db_select_albaranes.php';
     mysqli_close($conn);
 ?>

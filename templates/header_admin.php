@@ -77,9 +77,17 @@ if(isset($_SESSION['nombre']) != false){
         <li>
           <a href="/binife/admin.php">Albaranes</a>
         </li>
-        <li>
-          <a href="/binife/forms/form_alta_cliente.php">Alta cliente</a>
+        <li class="dropdown">
+          <span onclick="toggleDropdown()" class ="span_dropdown">Clientes ▼</span>
+          <ul class="dropdown-content list-unstyled ms-2">
+            <li><a href="/binife/forms/form_alta_cliente.php">Alta cliente</a></li>
+            <li><a href="/binife/funciones/db_select_clientes.php">Ver clientes</a></li>
+            <!-- <li>Subelemento 3</li> -->
+          </ul>
         </li>
+        <!-- <li>
+          <a href="/binife/forms/form_alta_cliente.php">Alta cliente</a>
+        </li> -->
         <li>
           <a href="/binife/reservas.php">Ver reservas</a>
         </li>

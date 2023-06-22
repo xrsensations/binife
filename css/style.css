@@ -1,11 +1,29 @@
 
 
+
+.scrollme {
+  overflow-x: auto;
+  width: 90%;
+  display: flex;
+}
 /*
 ----------------------------------------
 SIDEBAR
 ----------------------------------------
 */
 
+.span_dropdown{
+  color: rgb(49, 47, 47);
+  cursor: pointer;
+}
+.dropdown-content {
+  display: none;
+  cursor: pointer;
+}
+
+.dropdown-content.show {
+  display: block;
+}
 
 .wrapper {
     display: flex;
@@ -14,9 +32,9 @@ SIDEBAR
   }
   
   #sidebar {
-    width: 250px;
+    min-width: 250px;
     background: #f1f1f1;
-    padding: 3%;
+    padding: 30px;
     color: #101010;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: all 0.3s;
@@ -29,7 +47,7 @@ SIDEBAR
   } */
   
   #sidebar.active {
-    margin-left: -250px;
+    margin-left: -280px;
   }
   
   #content {
@@ -44,7 +62,7 @@ SIDEBAR
   
   #sidebar li a{
     text-decoration: none;
-    color: rgb(86, 82, 82);
+    color: rgb(49, 47, 47);
   }
 
   #sidebar li{
@@ -53,6 +71,25 @@ SIDEBAR
 
   .forms{
     background-color: #f6f6f7;
+  }
+  .table-container {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .trabajos {
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:20px;
+  }
+  .trabajo{
+    width: 300px;
+    background-color: #eeeeee;
+    border: 1px solid;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
   }
 
 @media (min-width: 650px) {

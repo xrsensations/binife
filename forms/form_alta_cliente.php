@@ -2,7 +2,7 @@
 
 <div id="content" class = "">
     <div class = "row">
-        <form class = "w-75 md-25 mx-auto p-5 forms">
+        <form action = "../funciones/db_insert_cliente.php" class = "w-75 md-25 mx-auto p-5 forms" method = "POST">
             <h3><strong>Da de alta a un nuevo cliente</strong></h3><br>
             <div class = "row">
                     <div class ="col-md-6">
@@ -52,9 +52,7 @@
             
             </div>
             
-
-            
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <input type="submit" class="btn btn-primary" value = "Dar de alta"/>
         </form>
     </div>
 </div>
