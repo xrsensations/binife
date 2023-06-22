@@ -81,6 +81,9 @@ if(isset($_SESSION['nombre']) != false){
           <a href="/binife/forms/form_alta_cliente.php">Alta cliente</a>
         </li>
         <li>
+          <a href="/binife/reservas.php">Ver reservas</a>
+        </li>
+        <li>
           <a href="/binife/forms/form_insertar_reserva.php">Añadir reserva</a>
         </li>
         <li>
