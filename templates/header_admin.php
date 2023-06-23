@@ -28,27 +28,6 @@ if(isset($_SESSION['nombre']) != false){
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0 lg-end">
-            <li class="nav-item">
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul> -->
         </div>
         <?php if($var_nombre != " "){
           echo'<a class="btn btn-outline-danger" href = "/binife/funciones/action_log_out.php">Cerrar sesión</a>';
@@ -92,7 +71,7 @@ if(isset($_SESSION['nombre']) != false){
           </ul>
         </li>
         <li class="dropdown">
-          <span onclick="toggleDropdown(this)" class ="span_dropdown"><i class="fa-regular fa-user"></i>&nbsp;Reservas&nbsp;<i class="fa-solid fa-caret-down"></i></span>
+          <span onclick="toggleDropdown(this)" class ="span_dropdown"><i class="fa-solid fa-clipboard-list"></i>&nbsp;Reservas&nbsp;<i class="fa-solid fa-caret-down"></i></span>
           <ul class="dropdown-content list-unstyled ms-2">
             <li><a href="/binife/forms/form_insertar_reserva.php">Añadir reserva</a></li>
             <li><a href="/binife/reservas.php">Ver reservas</a></li>
@@ -107,6 +86,9 @@ if(isset($_SESSION['nombre']) != false){
         </li>
         <li>
           <a href="/binife/equipos.php"><i class="fa-solid fa-people-group"></i>&nbsp;Equipos</a>
+        </li>
+        <li>
+          <a href="/binife/scraping.php"><i class="fa-solid fa-laptop-code"></i>&nbsp;Scraping</a>
         </li>
         
         <!-- <li class="nav-item dropdown">
