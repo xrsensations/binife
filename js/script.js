@@ -21,7 +21,6 @@ function mostrarHospedaje(id_cliente){
   
 }  
 
-<<<<<<< HEAD
 function actualizarSalida(entrada){
   salida = document.getElementById("fechaSalida")
   salida.disabled = false;
@@ -31,9 +30,7 @@ function actualizarSalida(entrada){
   salida.value = date.toLocaleDateString('en-CA');
   salida.focus();
 }  
-=======
 function toggleDropdown() {
   var dropdown = document.querySelector('.dropdown-content');
   dropdown.classList.toggle('show');
 }
->>>>>>> c8add72 (albaranes)
