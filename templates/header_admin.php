@@ -17,6 +17,7 @@ if(isset($_SESSION['nombre']) != false){
     <title>Binife</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="/binife/css/style.css">
+    <script src="https://kit.fontawesome.com/3f23fcb941.js" crossorigin="anonymous"></script>
 </head>
 <header>
     <nav class="navbar navbar-expand-lg bg-light" id ="nav">
@@ -72,16 +73,29 @@ if(isset($_SESSION['nombre']) != false){
       </div>
       <ul class="list-unstyled">
         <li>
-          <a href="/binife/admin.php">Panel</a>
-        </li>
-        <li>
-          <a href="/binife/admin.php">Albaranes</a>
+          <a href="/binife/admin.php"><i class="fa-solid fa-sliders"></i>&nbsp;Panel</a>
         </li>
         <li class="dropdown">
-          <span onclick="toggleDropdown()" class ="span_dropdown">Clientes ▼</span>
+          <span onclick="toggleDropdown(this)" class ="span_dropdown"><i class="fa-solid fa-list-check"></i>&nbsp;Albaranes&nbsp;<i class="fa-solid fa-caret-down"></i></span>
+          <ul class="dropdown-content list-unstyled ms-2">
+            <li><a href="/binife/forms/form_crear_albaran.php">Crear albarán</a></li>
+            <li><a href="/binife/funciones/db_select_clientes.php">Ver albaranes</a></li>
+            <!-- <li>Subelemento 3</li> -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <span onclick="toggleDropdown(this)" class ="span_dropdown"><i class="fa-regular fa-user"></i>&nbsp;Clientes&nbsp;<i class="fa-solid fa-caret-down"></i></span>
           <ul class="dropdown-content list-unstyled ms-2">
             <li><a href="/binife/forms/form_alta_cliente.php">Alta cliente</a></li>
             <li><a href="/binife/funciones/db_select_clientes.php">Ver clientes</a></li>
+            <!-- <li>Subelemento 3</li> -->
+          </ul>
+        </li>
+        <li class="dropdown">
+          <span onclick="toggleDropdown(this)" class ="span_dropdown"><i class="fa-regular fa-user"></i>&nbsp;Reservas&nbsp;<i class="fa-solid fa-caret-down"></i></span>
+          <ul class="dropdown-content list-unstyled ms-2">
+            <li><a href="/binife/forms/form_insertar_reserva.php">Añadir reserva</a></li>
+            <li><a href="/binife/reservas.php">Ver reservas</a></li>
             <!-- <li>Subelemento 3</li> -->
           </ul>
         </li>
@@ -89,16 +103,10 @@ if(isset($_SESSION['nombre']) != false){
           <a href="/binife/forms/form_alta_cliente.php">Alta cliente</a>
         </li> -->
         <li>
-          <a href="/binife/reservas.php">Ver reservas</a>
+          <a href="/binife/tarifas.php"><i class="fa-solid fa-hand-holding-dollar"></i>&nbsp;Tarifas</a>
         </li>
         <li>
-          <a href="/binife/forms/form_insertar_reserva.php">Añadir reserva</a>
-        </li>
-        <li>
-          <a href="/binife/tarifas.php">Tarifas</a>
-        </li>
-        <li>
-          <a href="/binife/equipos.php">Equipos</a>
+          <a href="/binife/equipos.php"><i class="fa-solid fa-people-group"></i>&nbsp;Equipos</a>
         </li>
         
         <!-- <li class="nav-item dropdown">

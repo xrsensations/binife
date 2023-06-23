@@ -31,7 +31,32 @@ function actualizarSalida(entrada){
   salida.focus();
 }  
 
+<<<<<<< HEAD
 function toggleDropdown() {
   var dropdown = document.querySelector('.dropdown-content');
   dropdown.classList.toggle('show');
 }
+=======
+function toggleDropdown(span) {
+  var ul = span.nextElementSibling;
+  console.log(ul);
+  ul.classList.toggle('show');
+}
+
+$(document).ready(function() {
+  // Cuando se cambia la opción del campo select o se escribe en el campo de búsqueda
+  $('#filtro, #busqueda').on('change keyup', function() {
+    var filtro = $('#filtro').val();
+    var busqueda = $('#busqueda').val();
+    // Realizar la petición Ajax
+    $.ajax({
+      url: '../funciones/action_select_clientes_ajax.php',
+      method: 'POST',
+      data: { filtro: filtro, busqueda: busqueda },
+      success: function(response) {
+        $('#resultado').html(response);
+      }
+    });
+  });
+});
+>>>>>>> d05dc20 (albaran)
