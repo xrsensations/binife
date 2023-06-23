@@ -30,6 +30,7 @@ function actualizarSalida(entrada){
   salida.value = date.toLocaleDateString('en-CA');
   salida.focus();
 }  
+
 function toggleDropdown() {
   var dropdown = document.querySelector('.dropdown-content');
   dropdown.classList.toggle('show');
