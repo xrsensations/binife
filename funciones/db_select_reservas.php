@@ -9,7 +9,7 @@
     $sql = "SELECT bini_reservas.*, bini_clientes.nombre_comercial AS nombre_comercial, bini_hospedajes.nombre_hospedaje AS hospedaje FROM bini_reservas 
     INNER JOIN bini_clientes ON bini_reservas.cliente_id = bini_clientes.cliente_id
     INNER JOIN bini_hospedajes ON bini_reservas.hospedaje_id = bini_hospedajes.hospedaje_id
-    WHERE bini_reservas.fecha_entrada < CURDATE() AND bini_reservas.fecha_salida > CURDATE()
+    WHERE bini_reservas.fecha_entrada <= CURDATE() AND bini_reservas.fecha_salida >= CURDATE()
     ORDER BY bini_reservas.fecha_creacion DESC";
     
     $result = mysqli_query($conn, $sql);
