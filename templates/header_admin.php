@@ -108,6 +108,9 @@ if(isset($_SESSION['nombre']) != false){
         <li>
           <a href="/binife/equipos.php"><i class="fa-solid fa-people-group"></i>&nbsp;Equipos</a>
         </li>
+        <li>
+          <a href="/binife/ver_trabajadores.php"><i class="fa-solid fa-user"></i>&nbsp; Añadir trabajador</a>
+        </li>
         
         <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">

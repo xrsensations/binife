@@ -31,12 +31,10 @@ function actualizarSalida(entrada){
   salida.focus();
 }  
 
-<<<<<<< HEAD
 function toggleDropdown() {
   var dropdown = document.querySelector('.dropdown-content');
   dropdown.classList.toggle('show');
 }
-=======
 function toggleDropdown(span) {
   var ul = span.nextElementSibling;
   console.log(ul);
@@ -59,4 +57,3 @@ $(document).ready(function() {
     });
   });
 });
->>>>>>> d05dc20 (albaran)
