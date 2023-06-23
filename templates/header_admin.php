@@ -89,6 +89,8 @@ if(isset($_SESSION['nombre']) != false){
         </li>
         <li>
           <a href="/binife/ver_trabajadores.php"><i class="fa-solid fa-user"></i>&nbsp; Añadir trabajador</a>
+          </li>
+        <li>
           <a href="/binife/scraping.php"><i class="fa-solid fa-laptop-code"></i>&nbsp;Scraping</a>
         </li>
         
